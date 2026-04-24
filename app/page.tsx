@@ -70,7 +70,7 @@ export default function Home() {
   {/* Blueprint-style background */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
   <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
- <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
+ <div className="blueprint-drift absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
   <div className="absolute inset-0 [background-image:linear-gradient(135deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%),linear-gradient(45deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%)] [background-size:160px_160px]" />
   <div className="absolute right-20 top-20 h-64 w-64 rounded-full border border-blue-300/30" />
   <div className="absolute right-44 top-44 h-40 w-40 rounded-full border border-blue-300/20" />
