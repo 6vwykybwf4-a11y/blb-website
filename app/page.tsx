@@ -113,7 +113,11 @@ export default function Home() {
       </div>
     </div>
 
-    <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur">
+   {/* Glow behind NAICS panel */}
+<div className="absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
+    <div className="absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
+
+<div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl p-8 shadow-2xl backdrop-blur">
       <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
         NAICS Codes
       </p>
@@ -129,7 +133,7 @@ export default function Home() {
         ].map(([code, label]) => (
           <div
             key={code}
-            className="group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-950/30"
+            className="group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-950/40 hover:shadow-lg hover:shadow-blue-500/10"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/40 text-blue-300">
             <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl shadow-lg shadow-blue-500/10">
@@ -141,7 +145,7 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="text-2xl font-black text-blue-400">
+              <div className="text-2xl font-black text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
                 {code}
               </div>
               <div className="mt-1 text-sm leading-6 text-slate-300">
