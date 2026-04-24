@@ -78,6 +78,28 @@ export default function Home() {
     </div>
   </div>
 </section>
+      <section className="border-y border-white/10 bg-slate-900 px-6 py-10">
+  <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
+    {[
+      ["Primary NAICS", "811121"],
+      ["Service Area", "DFW & North Texas"],
+      ["Experience", "Since 1999"],
+      ["Positioning", "Gov/Fleet Ready"],
+    ].map(([label, value]) => (
+      <div
+        key={label}
+        className="rounded-2xl border border-white/10 bg-white/5 p-6 shadow-lg"
+      >
+        <div className="text-xs font-bold uppercase tracking-[0.25em] text-blue-300">
+          {label}
+        </div>
+        <div className="mt-3 text-2xl font-black text-white">
+          {value}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
 
       <section id="capabilities" className="bg-white px-6 py-24 text-slate-950">
         <div className="mx-auto max-w-7xl">
