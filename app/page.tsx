@@ -1,106 +1,121 @@
 const services = [
   {
-    title: "Fleet Vehicle Repair",
-    text: "Auto body repair, collision support, hail restoration, and service coordination for government and commercial fleets.",
+    title: "Auto Body Repair",
+    description:
+      "Full-service auto body and collision repair with professional craftsmanship and dependable turnaround.",
+  },
+  {
+    title: "Hail Damage Repair",
+    description:
+      "High-volume hail repair solutions built for storm response and CAT events.",
   },
   {
     title: "Claims Management",
-    text: "Insurance-aligned estimating, supplement handling, documentation, and repair process support.",
+    description:
+      "Insurance claims handling, supplementing, and estimate management to reduce client friction.",
   },
   {
-    title: "Storm Response",
-    text: "Scalable hail and CAT event support for high-volume vehicle repair needs.",
-  },
-  {
-    title: "Logistics Support",
-    text: "Pickup, delivery, coordination, and repair workflow support to reduce fleet downtime.",
+    title: "Fleet Services",
+    description:
+      "Maintenance and repair support for government, municipal, and commercial fleets.",
   },
 ];
 
-const naics = ["811121", "811122", "524291", "488490"];
+const differentiators = [
+  "Integrated repair, claims, and logistics model",
+  "Storm-response ready for hail and CAT volume",
+  "Fleet-focused, government-ready presentation",
+  "Family-owned with industry experience since 1999",
+];
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-white text-slate-900">
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
+      <header className="border-b bg-[#0B1F3A] text-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
-            <div className="text-3xl font-black">BLB</div>
-            <div className="text-xs tracking-[0.25em] text-slate-400">
+            <div className="text-3xl font-extrabold">BLB</div>
+            <div className="text-sm tracking-[0.2em] text-slate-300">
               BROTHERS LEGACY BLUEPRINT, LLC
             </div>
           </div>
 
-          <nav className="hidden md:flex gap-8 text-sm font-bold text-slate-300">
-            <a href="#capabilities" className="hover:text-white">Capabilities</a>
-            <a href="#contracting" className="hover:text-white">Contracting</a>
-            <a href="#strengths" className="hover:text-white">Strengths</a>
-            <a href="#contact" className="hover:text-white">Contact</a>
+          <nav className="hidden md:flex gap-8 text-sm font-medium">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contracting">Contracting</a>
+            <a href="#contact">Contact</a>
           </nav>
 
-          <a href="#contact" className="bg-white text-slate-950 px-5 py-3 rounded-xl font-bold">
-            Request Info
+          <a href="#contact" className="border px-4 py-2 rounded-xl">
+            Request Quote
           </a>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.35),transparent_35%)]" />
-
-        <div className="relative mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 items-center">
+      <section className="bg-gradient-to-br from-[#0B1F3A] to-slate-900 text-white px-6 py-20">
+        <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-blue-300 uppercase text-sm tracking-[0.3em] mb-5">
-              Government & Fleet Support
+            <p className="uppercase text-sm tracking-widest text-slate-300">
+              DBA: Car Dents
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight">
-              Contract-ready vehicle repair, claims, and fleet support.
+            <h1 className="text-5xl font-black mt-4">
+              Building Legacy. Creating Impact.
             </h1>
 
-            <p className="mt-6 text-slate-300 max-w-2xl">
-              BLB supports government, municipal, and commercial fleets with repair,
-              hail response, claims management, and logistics coordination.
+            <p className="mt-6 text-lg text-slate-300">
+              Brothers Legacy Blueprint delivers auto body repair, hail damage
+              restoration, claims management, fleet services, and
+              government-ready support.
             </p>
 
             <div className="mt-8 flex gap-4">
-              <a href="#capabilities" className="bg-white text-black px-6 py-4 rounded-xl font-bold">
-                View Capabilities
+              <a href="#services" className="bg-white text-black px-6 py-3 rounded-xl">
+                Our Services
               </a>
-              <a href="#contact" className="border px-6 py-4 rounded-xl font-bold">
-                Contact
+              <a href="#contracting" className="border px-6 py-3 rounded-xl">
+                Government Contracting
               </a>
             </div>
           </div>
 
-          {/* PROFILE CARD */}
-          <div className="bg-white text-black p-6 rounded-2xl shadow-xl">
-            <h3 className="font-black text-xl mb-4">Contractor Profile</h3>
-            <p className="text-sm mb-4">Fleet repair, hail response, claims support.</p>
-
-            <div className="flex gap-2 flex-wrap">
-              {naics.map((code) => (
-                <span key={code} className="bg-slate-900 text-white px-3 py-1 rounded-full text-sm">
-                  {code}
-                </span>
-              ))}
-            </div>
+          <div className="bg-white text-black p-6 rounded-xl shadow-xl">
+            <h3 className="font-bold">BLB Snapshot</h3>
+            <p className="mt-2 text-sm">
+              Auto body repair, hail damage, claims management, fleet support.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* CAPABILITIES */}
-      <section id="capabilities" className="bg-white text-black px-6 py-24">
+      {/* ABOUT */}
+      <section id="about" className="px-6 py-20">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-black">Core Capabilities</h2>
+          <h2 className="text-4xl font-black">About BLB</h2>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <p className="mt-6 text-lg text-slate-600 max-w-3xl">
+            Brothers Legacy Blueprint is built on integrity, responsiveness,
+            and dependable execution. Operating under Car Dents, the company
+            combines repair expertise, insurance-aligned processes, and
+            logistics support.
+          </p>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="bg-slate-50 px-6 py-20">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-4xl font-black">Our Services</h2>
+
+          <div className="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((s) => (
-              <div key={s.title} className="p-6 bg-slate-100 rounded-xl">
-                <h3 className="font-black">{s.title}</h3>
-                <p className="mt-2 text-sm">{s.text}</p>
+              <div key={s.title} className="bg-white p-6 rounded-xl shadow">
+                <h3 className="font-bold">{s.title}</h3>
+                <p className="mt-3 text-sm text-slate-600">{s.description}</p>
               </div>
             ))}
           </div>
@@ -108,52 +123,36 @@ export default function Home() {
       </section>
 
       {/* CONTRACTING */}
-      <section id="contracting" className="px-6 py-24">
-        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-8">
-          <div className="bg-blue-900 p-8 rounded-xl">
-            <h2 className="text-3xl font-black">Government Ready</h2>
-            <p className="mt-4 text-slate-200">
-              BLB is structured for fleet, municipal, and agency contracts with scalable service.
+      <section id="contracting" className="px-6 py-20">
+        <div className="mx-auto max-w-7xl grid md:grid-cols-2 gap-8">
+          <div className="bg-[#0B1F3A] text-white p-8 rounded-xl">
+            <h2 className="text-3xl font-black">Government Contracting</h2>
+            <p className="mt-4">
+              Built to present like a serious contractor for local, state,
+              and federal opportunities.
             </p>
           </div>
 
-          <div className="bg-white text-black p-8 rounded-xl">
-            <h2 className="font-black text-xl">Why BLB</h2>
+          <div className="bg-slate-100 p-8 rounded-xl">
+            <h2 className="font-bold">Why BLB</h2>
             <ul className="mt-4 space-y-2">
-              <li>• Claims + repair in one vendor</li>
-              <li>• Fleet uptime focus</li>
-              <li>• Storm response capable</li>
-              <li>• DFW-based operations</li>
+              {differentiators.map((d) => (
+                <li key={d}>• {d}</li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
-      {/* STRENGTHS */}
-      <section id="strengths" className="bg-white text-black px-6 py-24">
-        <div className="mx-auto max-w-7xl grid md:grid-cols-4 gap-6">
-          {[
-            "Since 1999 Experience",
-            "DFW Based",
-            "Fleet Focused",
-            "Storm Ready",
-          ].map((item) => (
-            <div key={item} className="bg-slate-100 p-6 rounded-xl font-bold">
-              {item}
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* CONTACT */}
-      <section id="contact" className="px-6 py-24">
+      <section id="contact" className="bg-slate-900 text-white px-6 py-20">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-4xl font-black">Contact BLB</h2>
 
-          <div className="mt-6">
-            <p>📞 972.896.0126</p>
-            <p>📧 Mikal.sanchez@brotherslegacyblueprint.com</p>
-            <p>📍 Garland, TX</p>
+          <div className="mt-6 space-y-3">
+            <div>📞 972.896.0126</div>
+            <div>📧 Mikal.sanchez@brotherslegacyblueprint.com</div>
+            <div>📍 Garland, TX</div>
           </div>
         </div>
       </section>
