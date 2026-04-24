@@ -31,12 +31,27 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href="mailto:Mikal.sanchez@brotherslegacyblueprint.com"
-            className="rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-200"
-          >
-            Contact BLB
-          </a>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
+  <a href="#capabilities" className="hover:text-white transition">
+    Capabilities
+  </a>
+  <a href="#contracting" className="hover:text-white transition">
+    Contracting
+  </a>
+  <a href="#strengths" className="hover:text-white transition">
+    Strengths
+  </a>
+  <a href="#contact" className="hover:text-white transition">
+    Contact
+  </a>
+</nav>
+
+<a
+  href="#contact"
+  className="ml-6 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-200 transition"
+>
+  Request Capability Review
+</a>
         </div>
       </header>
 
