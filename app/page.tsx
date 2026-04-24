@@ -189,49 +189,143 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-slate-950 px-6 py-24">
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-white/5 p-10 shadow-2xl">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
-            Contact
-          </p>
+     <section className="bg-white px-6 py-24 text-slate-950">
+  <div className="mx-auto max-w-7xl">
+    <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
+      Contractor Strengths
+    </p>
 
-          <h2 className="mt-4 text-4xl font-black">
-            Ready to discuss a fleet or government opportunity?
-          </h2>
+    <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-tight md:text-5xl">
+      Built for reliability, documentation, and operational response.
+    </h2>
 
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-            Contact Brothers Legacy Blueprint, LLC for vehicle repair support,
-            hail response, claims management, and contracting conversations.
-          </p>
+    <div className="mt-12 grid gap-6 md:grid-cols-4">
+      {[
+        "Industry experience since 1999",
+        "DFW-based fleet support",
+        "Claims + repair coordination",
+        "Storm-response capability",
+      ].map((item) => (
+        <div
+          key={item}
+          className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
+        >
+          <div className="text-3xl font-black text-[#0B1F3A]">✓</div>
+          <p className="mt-4 font-bold text-slate-800">{item}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            <div>
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
-                Phone
-              </div>
-              <div className="mt-2 text-xl">972.896.0126</div>
-            </div>
+<section id="contact" className="bg-slate-950 px-6 py-24">
+  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-2">
+    <div>
+      <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
+        Request Information
+      </p>
 
-            <div>
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
-                Email
-              </div>
-              <div className="mt-2 text-xl">
-                Mikal.sanchez@brotherslegacyblueprint.com
-              </div>
-            </div>
+      <h2 className="mt-4 text-4xl font-black md:text-5xl">
+        Submit a fleet, agency, or contracting opportunity.
+      </h2>
 
-            <div>
-              <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-400">
-                Location
-              </div>
-              <div className="mt-2 text-xl">
-                Garland, TX
-              </div>
-            </div>
+      <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+        Contact Brothers Legacy Blueprint, LLC for vehicle repair support,
+        hail response, claims management, fleet service coordination, or
+        government contracting conversations.
+      </p>
+
+      <div className="mt-10 space-y-5 text-slate-300">
+        <div>
+          <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+            Phone
+          </div>
+          <div className="mt-1 text-2xl font-bold text-white">972.896.0126</div>
+        </div>
+
+        <div>
+          <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+            Email
+          </div>
+          <div className="mt-1 text-xl font-bold text-white">
+            Mikal.sanchez@brotherslegacyblueprint.com
           </div>
         </div>
-      </section>
+
+        <div>
+          <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
+            Location
+          </div>
+          <div className="mt-1 text-xl font-bold text-white">
+            Garland, TX • Serving DFW & North Texas
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form
+      action="mailto:Mikal.sanchez@brotherslegacyblueprint.com"
+      method="post"
+      encType="text/plain"
+      className="rounded-[2rem] border border-white/10 bg-white p-8 text-slate-950 shadow-2xl"
+    >
+      <h3 className="text-2xl font-black text-[#0B1F3A]">
+        Opportunity Inquiry
+      </h3>
+
+      <div className="mt-6 grid gap-4">
+        <input
+          name="Name"
+          placeholder="Name"
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        />
+
+        <input
+          name="Organization"
+          placeholder="Organization / Agency"
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        />
+
+        <input
+          name="Phone"
+          placeholder="Phone"
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        />
+
+        <input
+          name="Email"
+          placeholder="Email"
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        />
+
+        <select
+          name="Opportunity Type"
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        >
+          <option>Fleet Vehicle Repair</option>
+          <option>Hail / Storm Response</option>
+          <option>Claims Management</option>
+          <option>Government Contracting</option>
+          <option>Other</option>
+        </select>
+
+        <textarea
+          name="Message"
+          placeholder="Tell us about the opportunity..."
+          rows={5}
+          className="rounded-xl border border-slate-300 px-4 py-3"
+        />
+
+        <button
+          type="submit"
+          className="rounded-2xl bg-[#0B1F3A] px-6 py-4 font-black text-white hover:bg-slate-800"
+        >
+          Submit Inquiry
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
     </main>
   );
 }
