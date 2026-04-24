@@ -17,12 +17,14 @@ const services = [
   },
 ];
 
+const naics = ["811121", "811122", "524291", "488490"];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
 
       {/* HEADER */}
-      <header className="border-b border-white/10">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div>
             <div className="text-3xl font-black">BLB</div>
@@ -31,110 +33,127 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href="#contact"
-            className="rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-200"
-          >
-            Contact
+          <nav className="hidden md:flex gap-8 text-sm font-bold text-slate-300">
+            <a href="#capabilities" className="hover:text-white">Capabilities</a>
+            <a href="#contracting" className="hover:text-white">Contracting</a>
+            <a href="#strengths" className="hover:text-white">Strengths</a>
+            <a href="#contact" className="hover:text-white">Contact</a>
+          </nav>
+
+          <a href="#contact" className="bg-white text-slate-950 px-5 py-3 rounded-xl font-bold">
+            Request Info
           </a>
         </div>
       </header>
 
       {/* HERO */}
-      <section className="relative overflow-hidden px-6 py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_60%)]" />
+      <section className="relative overflow-hidden px-6 py-28">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.35),transparent_35%)]" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.4em] text-blue-400">
-            Brothers Legacy Blueprint, LLC
-          </p>
+        <div className="relative mx-auto max-w-7xl grid gap-12 lg:grid-cols-2 items-center">
+          <div>
+            <p className="text-blue-300 uppercase text-sm tracking-[0.3em] mb-5">
+              Government & Fleet Support
+            </p>
 
-          <h1 className="mt-6 text-5xl font-black md:text-6xl">
-            Building Legacy.
-            <br />
-            Creating Impact.
-          </h1>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight">
+              Contract-ready vehicle repair, claims, and fleet support.
+            </h1>
 
-          <p className="mt-8 max-w-2xl text-lg text-slate-300">
-            Auto body repair, hail damage restoration, claims management, and
-            fleet-ready services designed for performance and government readiness.
-          </p>
+            <p className="mt-6 text-slate-300 max-w-2xl">
+              BLB supports government, municipal, and commercial fleets with repair,
+              hail response, claims management, and logistics coordination.
+            </p>
 
-          <div className="mt-10 flex gap-4">
-            <a
-              href="#contact"
-              className="rounded-2xl bg-blue-600 px-6 py-4 font-bold hover:bg-blue-700"
-            >
-              Request Opportunity
-            </a>
+            <div className="mt-8 flex gap-4">
+              <a href="#capabilities" className="bg-white text-black px-6 py-4 rounded-xl font-bold">
+                View Capabilities
+              </a>
+              <a href="#contact" className="border px-6 py-4 rounded-xl font-bold">
+                Contact
+              </a>
+            </div>
+          </div>
 
-            <a
-              href="#services"
-              className="rounded-2xl border border-white/20 px-6 py-4 font-bold hover:bg-white/10"
-            >
-              View Services
-            </a>
+          {/* PROFILE CARD */}
+          <div className="bg-white text-black p-6 rounded-2xl shadow-xl">
+            <h3 className="font-black text-xl mb-4">Contractor Profile</h3>
+            <p className="text-sm mb-4">Fleet repair, hail response, claims support.</p>
+
+            <div className="flex gap-2 flex-wrap">
+              {naics.map((code) => (
+                <span key={code} className="bg-slate-900 text-white px-3 py-1 rounded-full text-sm">
+                  {code}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* SNAPSHOT */}
-      <section className="border-y border-white/10 bg-slate-900 px-6 py-10">
-        <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
-          {[
-            ["Primary NAICS", "811121"],
-            ["Service Area", "DFW & North Texas"],
-            ["Experience", "Since 1999"],
-            ["Positioning", "Gov/Fleet Ready"],
-          ].map(([label, value]) => (
-            <div
-              key={label}
-              className="rounded-2xl border border-white/10 bg-white/5 p-6"
-            >
-              <div className="text-xs uppercase tracking-[0.25em] text-blue-300">
-                {label}
-              </div>
-              <div className="mt-3 text-2xl font-black">{value}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* SERVICES */}
-      <section id="services" className="px-6 py-24">
+      {/* CAPABILITIES */}
+      <section id="capabilities" className="bg-white text-black px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-4xl font-black">Our Services</h2>
+          <h2 className="text-4xl font-black">Core Capabilities</h2>
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="group rounded-3xl border border-white/10 bg-slate-900 p-8 transition hover:-translate-y-2 hover:bg-slate-800"
-              >
-                <div className="text-blue-400 text-2xl font-black">●</div>
-
-                <h3 className="mt-6 text-xl font-black">
-                  {service.title}
-                </h3>
-
-                <p className="mt-4 text-slate-300">
-                  {service.text}
-                </p>
+            {services.map((s) => (
+              <div key={s.title} className="p-6 bg-slate-100 rounded-xl">
+                <h3 className="font-black">{s.title}</h3>
+                <p className="mt-2 text-sm">{s.text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* CONTRACTING */}
+      <section id="contracting" className="px-6 py-24">
+        <div className="mx-auto max-w-7xl grid lg:grid-cols-2 gap-8">
+          <div className="bg-blue-900 p-8 rounded-xl">
+            <h2 className="text-3xl font-black">Government Ready</h2>
+            <p className="mt-4 text-slate-200">
+              BLB is structured for fleet, municipal, and agency contracts with scalable service.
+            </p>
+          </div>
+
+          <div className="bg-white text-black p-8 rounded-xl">
+            <h2 className="font-black text-xl">Why BLB</h2>
+            <ul className="mt-4 space-y-2">
+              <li>• Claims + repair in one vendor</li>
+              <li>• Fleet uptime focus</li>
+              <li>• Storm response capable</li>
+              <li>• DFW-based operations</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* STRENGTHS */}
+      <section id="strengths" className="bg-white text-black px-6 py-24">
+        <div className="mx-auto max-w-7xl grid md:grid-cols-4 gap-6">
+          {[
+            "Since 1999 Experience",
+            "DFW Based",
+            "Fleet Focused",
+            "Storm Ready",
+          ].map((item) => (
+            <div key={item} className="bg-slate-100 p-6 rounded-xl font-bold">
+              {item}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CONTACT */}
-      <section id="contact" className="bg-slate-900 px-6 py-24">
+      <section id="contact" className="px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-4xl font-black">Contact BLB</h2>
 
-          <div className="mt-10 space-y-4">
-            <div>📞 972.896.0126</div>
-            <div>📧 Mikal.sanchez@brotherslegacyblueprint.com</div>
-            <div>📍 Garland, TX</div>
+          <div className="mt-6">
+            <p>📞 972.896.0126</p>
+            <p>📧 Mikal.sanchez@brotherslegacyblueprint.com</p>
+            <p>📍 Garland, TX</p>
           </div>
         </div>
       </section>
