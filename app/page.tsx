@@ -25,26 +25,23 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-      <div className="flex items-center gap-5">
-  <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white p-3 shadow-lg">
-    <Image
-      src="/logo.png"
-      alt="Brothers Legacy Blueprint Logo"
-      width={80}
-      height={80}
-      className="h-full w-full object-contain"
-      priority
-    />
-  </div>
+     <div className="flex items-center gap-5">
+  <Image
+    src="/logo.png"
+    alt="Brothers Legacy Blueprint Logo"
+    width={80}
+    height={80}
+    className="h-16 w-auto object-contain"
+    priority
+  />
 
   <div>
-    <div className="text-3xl font-black leading-none">BLB</div>
-    <div className="mt-1 text-xs font-semibold tracking-[0.3em] text-slate-400">
+    <div className="text-2xl font-black leading-none">BLB</div>
+    <div className="mt-1 text-[11px] font-semibold tracking-[0.28em] text-slate-400">
       BROTHERS LEGACY BLUEPRINT, LLC
     </div>
   </div>
 </div>
-
           <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
   <a href="#capabilities" className="hover:text-white transition">
     Capabilities
