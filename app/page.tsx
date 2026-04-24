@@ -29,8 +29,8 @@ export default function Home() {
   <Image
     src="/logo.png"
     alt="Brothers Legacy Blueprint Logo"
-    width={80}
-    height={80}
+    width={100}
+    height={100}
     className="h-16 w-auto object-contain"
     priority
   />
