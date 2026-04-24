@@ -66,43 +66,83 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-slate-950 px-6 py-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_60%)]" />
+      <section className="relative overflow-hidden bg-slate-950 px-6 py-28">
+  {/* Blueprint-style background */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
+  <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
+  <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.12] [background-image:repeating-linear-gradient(135deg,#93c5fd_0_1px,transparent_1px_22px)]" />
 
-        <div className="relative mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.4em] text-blue-400">
-            Brothers Legacy Blueprint, LLC
-          </p>
+  <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+    <div>
+      <p className="text-sm font-bold uppercase tracking-[0.4em] text-blue-400">
+        Brothers Legacy Blueprint, LLC
+      </p>
 
-          <h1 className="mt-6 max-w-4xl text-5xl font-black leading-tight tracking-tight text-white md:text-6xl">
-            Building Legacy.
-            <br />
-            Creating Impact.
-          </h1>
+      <h1 className="mt-6 max-w-4xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl">
+        Building Legacy.
+        <br />
+        Creating Impact.
+      </h1>
 
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-            Auto body repair, hail damage restoration, claims management, and
-            fleet-ready services designed for performance, scalability, and
-            government contracting readiness.
-          </p>
+      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
+        Auto body repair, hail damage restoration, claims management, and
+        fleet-ready services designed for performance, scalability, and
+        government contracting readiness.
+      </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="rounded-2xl bg-blue-600 px-6 py-4 font-bold text-white shadow-lg hover:bg-blue-700"
-            >
-              Request Opportunity
-            </a>
+      <div className="mt-10 flex flex-wrap gap-4">
+        <a
+          href="#contact"
+          className="rounded-2xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
+        >
+          Request Opportunity
+        </a>
 
-            <a
-              href="#services"
-              className="rounded-2xl border border-white/20 px-6 py-4 font-bold text-white hover:bg-white/10"
-            >
-              View Services
-            </a>
+        <a
+          href="#services"
+          className="rounded-2xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10"
+        >
+          View Services
+        </a>
+      </div>
+    </div>
+
+    <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-2xl backdrop-blur">
+      <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
+        NAICS Codes
+      </p>
+
+      <div className="mt-5 h-px bg-white/20" />
+
+      <div className="mt-6 space-y-5">
+        {[
+          ["811121", "Automotive Body, Paint, and Interior Repair"],
+          ["811122", "Automotive Glass Replacement & Repair"],
+          ["524291", "Claims Adjusting"],
+          ["488490", "Other Support Activities for Road Transportation"],
+        ].map(([code, label]) => (
+          <div
+            key={code}
+            className="group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-950/30"
+          >
+            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/40 text-blue-300">
+              ●
+            </div>
+
+            <div>
+              <div className="text-2xl font-black text-blue-400">
+                {code}
+              </div>
+              <div className="mt-1 text-sm leading-6 text-slate-300">
+                {label}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="border-y border-white/10 bg-slate-900 px-6 py-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
