@@ -1,3 +1,4 @@
+import Image from "next/image";
 const services = [
   {
     title: "Fleet Vehicle Repair",
@@ -24,11 +25,22 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div>
-            <div className="text-3xl font-black">BLB</div>
-            <div className="text-xs font-semibold tracking-[0.25em] text-slate-400">
-              BROTHERS LEGACY BLUEPRINT, LLC
-            </div>
+         <div className="flex items-center gap-4">
+  <Image
+    src="/logo.png"
+    alt="Brothers Legacy Blueprint Logo"
+    width={56}
+    height={56}
+    className="h-14 w-14 object-contain"
+    priority
+  />
+  <div>
+    <div className="text-xl font-black">BLB</div>
+    <div className="text-xs font-semibold tracking-[0.25em] text-slate-400">
+      BROTHERS LEGACY BLUEPRINT, LLC
+    </div>
+  </div>
+</div>
           </div>
 
           <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
