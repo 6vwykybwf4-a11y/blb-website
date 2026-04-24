@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@keyframes blueprintDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-80px, 40px, 0);
+  }
+}
+
+.blueprint-drift {
+  animation: blueprintDrift 28s linear infinite alternate;
+}
