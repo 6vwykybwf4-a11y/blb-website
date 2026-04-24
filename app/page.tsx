@@ -70,7 +70,13 @@ export default function Home() {
   {/* Blueprint-style background */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
   <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
-  <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.12] [background-image:repeating-linear-gradient(135deg,#93c5fd_0_1px,transparent_1px_22px)]" />
+ <div className="absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
+  <div className="absolute inset-0 [background-image:linear-gradient(135deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%),linear-gradient(45deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%)] [background-size:160px_160px]" />
+  <div className="absolute right-20 top-20 h-64 w-64 rounded-full border border-blue-300/30" />
+  <div className="absolute right-44 top-44 h-40 w-40 rounded-full border border-blue-300/20" />
+  <div className="absolute right-10 bottom-20 h-px w-96 rotate-[-18deg] bg-blue-300/30" />
+  <div className="absolute right-32 bottom-40 h-px w-80 rotate-[24deg] bg-blue-300/20" />
+</div>
 
   <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
     <div>
@@ -126,7 +132,12 @@ export default function Home() {
             className="group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-950/30"
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/40 text-blue-300">
-              ●
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl shadow-lg shadow-blue-500/10">
+  {code === "811121" && "🚗"}
+  {code === "811122" && "🛠️"}
+  {code === "524291" && "📋"}
+  {code === "488490" && "🛣️"}
+</div>
             </div>
 
             <div>
