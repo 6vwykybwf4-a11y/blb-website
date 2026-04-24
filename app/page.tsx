@@ -26,17 +26,20 @@ export default function Home() {
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         <div className="flex items-center gap-4">
-  <Image
-    src="/logo.png"
-    alt="Brothers Legacy Blueprint Logo"
-    width={56}
-    height={56}
-    className="h-14 w-14 object-contain"
-    priority
-  />
+  <div className="flex h-16 w-16 items-center justify-center rounded-xl bg-white p-2 shadow-md">
+    <Image
+      src="/logo.png"
+      alt="Brothers Legacy Blueprint Logo"
+      width={64}
+      height={64}
+      className="h-full w-full object-contain"
+      priority
+    />
+  </div>
+
   <div>
-    <div className="text-xl font-black">BLB</div>
-    <div className="text-xs font-semibold tracking-[0.25em] text-slate-400">
+    <div className="text-2xl font-black leading-none">BLB</div>
+    <div className="mt-1 text-[11px] font-semibold tracking-[0.25em] text-slate-400">
       BROTHERS LEGACY BLUEPRINT, LLC
     </div>
   </div>
