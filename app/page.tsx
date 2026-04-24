@@ -111,12 +111,26 @@ export default function Home() {
             Structured support for agencies, fleets, and contracting partners.
           </h2>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm"
-              >
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+  {services.map((service) => (
+    <div
+      key={service.title}
+      className="group rounded-3xl border border-white/10 bg-slate-900 p-8 transition hover:-translate-y-2 hover:bg-slate-800 hover:shadow-2xl"
+    >
+      <div className="text-3xl font-black text-blue-400 group-hover:text-white">
+        ●
+      </div>
+
+      <h3 className="mt-6 text-xl font-black text-white">
+        {service.title}
+      </h3>
+
+      <p className="mt-4 text-slate-300 leading-relaxed">
+        {service.text}
+      </p>
+    </div>
+  ))}
+</div>
                 <h3 className="text-xl font-black text-[#0B1F3A]">
                   {service.title}
                 </h3>
