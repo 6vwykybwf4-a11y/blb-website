@@ -23,11 +23,12 @@
     ]
   },
   "include": [
-    "next-env.d.ts",
-    ".next/types/**/*.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "next-env.d.ts",
+  "global.d.ts",
+  ".next/types/**/*.ts",
+  "**/*.ts",
+  "**/*.tsx"
+],
   "exclude": [
     "node_modules"
   ]
