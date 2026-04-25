@@ -51,21 +51,21 @@
 }
 
 .delay-100 {
-  animation-delay: 100ms;
+  animation-delay: 180ms;
 }
 
 .delay-200 {
-  animation-delay: 200ms;
+  animation-delay: 360ms;
 }
 
 .delay-300 {
-  animation-delay: 300ms;
+  animation-delay: 540ms;
 }
 
 .delay-500 {
-  animation-delay: 500ms;
+  animation-delay: 720ms;
 }
 
 .delay-700 {
-  animation-delay: 700ms;
+  animation-delay: 900ms;
 }
