@@ -165,7 +165,7 @@ export default function Home() {
             ["Primary NAICS", "811121"],
             ["Service Area", "DFW & North Texas"],
             ["Experience", "Since 1999"],
-            ["Positioning", "Gov/Fleet Ready"],
+            ["Positioning", "Govt/Fleet Ready"],
           ].map(([label, value]) => (
             <div
               key={label}
