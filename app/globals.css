@@ -27,3 +27,45 @@
 .glow-pulse {
   animation: glowPulse 6s ease-in-out infinite;
 }
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation-name: fade-up;
+  animation-duration: 650ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.delay-0 {
+  animation-delay: 0ms;
+}
+
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+.delay-700 {
+  animation-delay: 700ms;
+}
