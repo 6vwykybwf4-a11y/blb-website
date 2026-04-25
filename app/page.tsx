@@ -138,10 +138,14 @@ export default function Home() {
           ["811122", "Automotive Glass Replacement & Repair"],
           ["524291", "Claims Adjusting"],
           ["488490", "Other Support Activities for Road Transportation"],
-        ].map(([code, label]) => (
+       ].map(([code, label], i) => (
           <div
             key={code}
-            className="group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:bg-blue-950/40 hover:shadow-lg hover:shadow-blue-500/10"
+          className={[
+  "group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40",
+  "opacity-0 translate-y-5 animate-fade-up",
+ naicsDelayClasses[i] ?? "delay-0",
+].join(" ")}
           >
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/40 text-blue-300">
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl transition duration-300 group-hover:shadow-lg group-hover:shadow-blue-400/30 group-hover:scale-110">
