@@ -19,6 +19,14 @@ const services = [
 ];
 
 const naics = ["811121", "811122", "524291", "488490"];
+const naicsDelayClasses = [
+  "delay-0",
+  "delay-100",
+  "delay-200",
+  "delay-300",
+  "delay-500",
+  "delay-700",
+];
 
 export default function Home() {
   return (
