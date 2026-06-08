@@ -138,8 +138,6 @@ export default function Home() {
 
               <a
                 href="/brothers-legacy-blueprint-capability-statement.pdf"
-                target="_blank"
-                rel="noreferrer"
                 className="rounded-2xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10"
               >
                 Download Capability Statement
