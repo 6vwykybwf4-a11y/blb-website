@@ -35,19 +35,19 @@ export default function Home() {
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
           <div className="flex items-center gap-4 sm:gap-5">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-2 shadow-lg shadow-slate-950/40 backdrop-blur-sm">
+            <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/[0.03] p-2 shadow-lg shadow-slate-950/40 backdrop-blur-sm">
               <Image
                 src="/logo.png"
                 alt="Brothers Legacy Blueprint Logo"
-                width={168}
-                height={168}
-                className="h-20 w-20 rounded-xl object-contain sm:h-24 sm:w-24"
+                width={220}
+                height={220}
+                className="h-24 w-24 object-contain sm:h-28 sm:w-28"
                 priority
               />
             </div>
 
             <div>
-              <div className="text-3xl font-black leading-none tracking-tight text-white">
+              <div className="text-3xl font-black leading-none tracking-tight text-white sm:text-4xl">
                 BLB
               </div>
               <div className="mt-1 text-[10px] font-semibold tracking-[0.22em] text-slate-300 sm:text-[11px] sm:tracking-[0.28em]">
