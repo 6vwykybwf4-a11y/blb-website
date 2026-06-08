@@ -145,6 +145,13 @@ export default function Home() {
                 Download Capability Statement
               </a>
             </div>
+
+            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-blue-400/30 bg-blue-500/10 px-5 py-3 text-sm text-slate-200 shadow-lg shadow-blue-950/20 backdrop-blur-sm">
+              <span className="font-bold uppercase tracking-[0.25em] text-blue-300">
+                UEI
+              </span>
+              <span className="font-black text-white">GBS7FLXMLJ84</span>
+            </div>
           </div>
 
           <div className="glow-pulse absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
