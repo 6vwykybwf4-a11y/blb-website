@@ -34,19 +34,23 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="flex items-center gap-5">
-            <Image
-              src="/logo.png"
-              alt="Brothers Legacy Blueprint Logo"
-              width={100}
-              height={100}
-              className="h-16 w-auto object-contain"
-              priority
-            />
+          <div className="flex items-center gap-4 sm:gap-5">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-2 shadow-lg shadow-slate-950/40 backdrop-blur-sm">
+              <Image
+                src="/logo.png"
+                alt="Brothers Legacy Blueprint Logo"
+                width={168}
+                height={168}
+                className="h-20 w-20 rounded-xl object-contain sm:h-24 sm:w-24"
+                priority
+              />
+            </div>
 
             <div>
-              <div className="text-2xl font-black leading-none">BLB</div>
-              <div className="mt-1 text-[11px] font-semibold tracking-[0.28em] text-slate-400">
+              <div className="text-3xl font-black leading-none tracking-tight text-white">
+                BLB
+              </div>
+              <div className="mt-1 text-[10px] font-semibold tracking-[0.22em] text-slate-300 sm:text-[11px] sm:tracking-[0.28em]">
                 BROTHERS LEGACY BLUEPRINT, LLC
               </div>
             </div>
