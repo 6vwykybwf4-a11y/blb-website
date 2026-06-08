@@ -3,21 +3,36 @@ import ContactForm from "./components/ContactForm";
 
 const services = [
   {
-    title: "Fleet Vehicle Repair",
-    text: "Auto body repair, collision support, hail restoration, and service coordination for government and commercial fleets.",
+    title: "Paintless Dent Repair",
+    text: "Fast, efficient dent removal for qualifying damage with minimal downtime and clean finishes.",
+  },
+  {
+    title: "Hail Damage Repair",
+    text: "Scalable CAT and high-volume hail repair support for individual vehicles, fleets, and storm-response surges.",
   },
   {
     title: "Claims Management",
     text: "Insurance-aligned estimating, supplement handling, documentation, and repair process support.",
   },
   {
-    title: "Storm Response",
-    text: "Scalable hail and CAT event support for high-volume vehicle repair needs.",
+    title: "Fleet Services",
+    text: "Vehicle repair, maintenance coordination, and pickup/delivery support for commercial and government fleets.",
   },
-  {
-    title: "Logistics Support",
-    text: "Pickup, delivery, coordination, and repair workflow support to reduce fleet downtime.",
-  },
+];
+
+const differentiators = [
+  "Integrated repair + claims + logistics model",
+  "Storm response ready for hail CAT demand",
+  "Insurance-aligned operations and supplementing",
+  "Mobile and fleet-focused service delivery",
+];
+
+const targetClients = [
+  "Federal, State & Local Government Agencies",
+  "Municipal Fleet Departments",
+  "Law Enforcement & Emergency Services",
+  "School Districts",
+  "Utility & Commercial Fleets",
 ];
 
 const naicsDelayClasses = [
@@ -52,6 +67,9 @@ export default function Home() {
               </div>
               <div className="mt-1 text-[10px] font-semibold tracking-[0.22em] text-slate-300 sm:text-[11px] sm:tracking-[0.28em]">
                 BROTHERS LEGACY BLUEPRINT, LLC
+              </div>
+              <div className="mt-1 text-xs font-semibold uppercase tracking-[0.25em] text-blue-300">
+                DBA Car Dents
               </div>
             </div>
           </div>
@@ -104,9 +122,10 @@ export default function Home() {
             </h1>
 
             <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-              Auto body repair, hail damage restoration, claims management, and
-              fleet-ready services designed for performance, scalability, and
-              government contracting readiness.
+              Auto body repair, hail damage restoration, claims management, fleet
+              services, and government contracting support designed for
+              performance, scalability, and fast response across DFW and North
+              Texas.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
@@ -118,10 +137,12 @@ export default function Home() {
               </a>
 
               <a
-                href="#capabilities"
+                href="/brothers-legacy-blueprint-capability-statement.pdf"
+                target="_blank"
+                rel="noreferrer"
                 className="rounded-2xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10"
               >
-                View Services
+                Download Capability Statement
               </a>
             </div>
           </div>
@@ -243,12 +264,12 @@ export default function Home() {
               A name built on family, craftsmanship, and trust.
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-300">
-              Brothers Legacy Blueprint, LLC was founded on the belief that
-              quality vehicle repair and operational reliability go hand in
-              hand. Rooted in decades of hands-on industry experience, BLB
-              brings a disciplined, blueprint-driven approach to every job, from
-              single-vehicle restorations to large-scale fleet and storm-response
-              operations.
+              Brothers Legacy Blueprint, LLC, DBA Car Dents, was founded on the
+              belief that quality vehicle repair and operational reliability go
+              hand in hand. Rooted in decades of hands-on industry experience,
+              BLB brings a disciplined, blueprint-driven approach to every job,
+              from single-vehicle restorations to large-scale fleet and
+              storm-response operations.
             </p>
             <p className="mt-4 text-lg leading-8 text-slate-300">
               Our work is positioned for the standards of public-sector and
@@ -270,10 +291,10 @@ export default function Home() {
               presentation, and responsive operational support.
             </p>
             <ul className="mt-6 space-y-3 text-base leading-7 text-slate-300">
-              <li>• Registered for federal and state contracting</li>
-              <li>• Insurance-aligned claims and estimating workflows</li>
-              <li>• Scalable response for hail and CAT events</li>
-              <li>• North Texas operations base</li>
+              <li>• Family-owned business established in 2010</li>
+              <li>• Industry experience since 1999</li>
+              <li>• Mobile service with pickup and delivery support</li>
+              <li>• Insurance-aligned estimating and supplementing</li>
             </ul>
           </div>
         </div>
@@ -287,7 +308,7 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
-            Contractor Strengths
+            Differentiators
           </p>
 
           <h2 className="mt-4 max-w-3xl text-4xl font-black tracking-tight md:text-5xl">
@@ -295,12 +316,7 @@ export default function Home() {
           </h2>
 
           <div className="mt-12 grid gap-6 md:grid-cols-4">
-            {[
-              "Industry experience since 1999",
-              "DFW-based fleet support",
-              "Claims + repair coordination",
-              "Storm-response capability",
-            ].map((item) => (
+            {differentiators.map((item) => (
               <div
                 key={item}
                 className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:border-blue-400/40"
@@ -309,6 +325,63 @@ export default function Home() {
                 <p className="mt-4 font-bold text-white">{item}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-950 px-6 py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-2xl backdrop-blur">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
+              Target Clients
+            </p>
+            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
+              Positioned for fleet, agency, and public-sector opportunities.
+            </h2>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {targetClients.map((client) => (
+                <div
+                  key={client}
+                  className="rounded-2xl border border-white/10 bg-slate-950/50 p-5 text-sm font-semibold text-slate-200"
+                >
+                  {client}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-2xl backdrop-blur">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
+              Company Snapshot
+            </p>
+            <div className="mt-8 space-y-5 text-slate-300">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  Business Structure
+                </div>
+                <div className="mt-1 text-lg font-bold text-white">LLC</div>
+              </div>
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  DBA
+                </div>
+                <div className="mt-1 text-lg font-bold text-white">Car Dents</div>
+              </div>
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  Small Business Status
+                </div>
+                <div className="mt-1 text-lg font-bold text-white">Yes</div>
+              </div>
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  UEI / CAGE
+                </div>
+                <div className="mt-1 text-lg font-bold text-white">
+                  To Be Assigned
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -360,7 +433,7 @@ export default function Home() {
                   Location
                 </div>
                 <div className="mt-1 text-xl font-bold text-white">
-                  Garland, TX • Serving DFW & North Texas
+                  2045 Forest Lane, Ste 160 • Garland, TX 75042
                 </div>
               </div>
             </div>
@@ -411,7 +484,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="#strengths" className="hover:text-white transition">
-                  Strengths
+                  Differentiators
                 </a>
               </li>
               <li>
@@ -440,7 +513,7 @@ export default function Home() {
                   Mikal.sanchez@brotherslegacyblueprint.com
                 </a>
               </li>
-              <li>Garland, TX</li>
+              <li>2045 Forest Lane, Ste 160, Garland, TX 75042</li>
             </ul>
           </div>
         </div>
