@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ContactForm from "./components/ContactForm";
+
 const services = [
   {
     title: "Fleet Vehicle Repair",
@@ -18,7 +20,6 @@ const services = [
   },
 ];
 
-const naics = ["811121", "811122", "524291", "488490"];
 const naicsDelayClasses = [
   "delay-0",
   "delay-100",
@@ -33,143 +34,142 @@ export default function Home() {
     <main className="min-h-screen bg-slate-950 text-white">
       <header className="border-b border-white/10 bg-slate-950">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-     <div className="flex items-center gap-5">
-  <Image
-    src="/logo.png"
-    alt="Brothers Legacy Blueprint Logo"
-    width={100}
-    height={100}
-    className="h-16 w-auto object-contain"
-    priority
-  />
+          <div className="flex items-center gap-5">
+            <Image
+              src="/logo.png"
+              alt="Brothers Legacy Blueprint Logo"
+              width={100}
+              height={100}
+              className="h-16 w-auto object-contain"
+              priority
+            />
 
-  <div>
-    <div className="text-2xl font-black leading-none">BLB</div>
-    <div className="mt-1 text-[11px] font-semibold tracking-[0.28em] text-slate-400">
-      BROTHERS LEGACY BLUEPRINT, LLC
-    </div>
-  </div>
-</div>
+            <div>
+              <div className="text-2xl font-black leading-none">BLB</div>
+              <div className="mt-1 text-[11px] font-semibold tracking-[0.28em] text-slate-400">
+                BROTHERS LEGACY BLUEPRINT, LLC
+              </div>
+            </div>
+          </div>
+
           <nav className="hidden md:flex items-center gap-8 text-sm font-bold text-slate-300">
-  <a href="#capabilities" className="hover:text-white transition">
-    Capabilities
-  </a>
-  <a href="#contracting" className="hover:text-white transition">
-    Contracting
-  </a>
-  <a href="#strengths" className="hover:text-white transition">
-    Strengths
-  </a>
-  <a href="#contact" className="hover:text-white transition">
-    Contact
-  </a>
-</nav>
+            <a href="#capabilities" className="hover:text-white transition">
+              Capabilities
+            </a>
+            <a href="#about" className="hover:text-white transition">
+              About
+            </a>
+            <a href="#strengths" className="hover:text-white transition">
+              Strengths
+            </a>
+            <a href="#contact" className="hover:text-white transition">
+              Contact
+            </a>
+          </nav>
 
-<a
-  href="#contact"
-  className="ml-6 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-200 transition"
->
-  Request Capability Review
-</a>
+          <a
+            href="#contact"
+            className="ml-6 rounded-xl bg-white px-5 py-3 text-sm font-bold text-slate-950 hover:bg-slate-200 transition"
+          >
+            Request Capability Review
+          </a>
         </div>
       </header>
 
       <section className="relative overflow-hidden bg-slate-950 px-6 py-28">
-  {/* Blueprint-style background */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
-  <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
- <div className="blueprint-drift absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
-  <div className="absolute inset-0 [background-image:linear-gradient(135deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%),linear-gradient(45deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%)] [background-size:160px_160px]" />
-  <div className="absolute right-20 top-20 h-64 w-64 rounded-full border border-blue-300/30" />
-  <div className="absolute right-44 top-44 h-40 w-40 rounded-full border border-blue-300/20" />
-  <div className="absolute right-10 bottom-20 h-px w-96 rotate-[-18deg] bg-blue-300/30" />
-  <div className="absolute right-32 bottom-40 h-px w-80 rotate-[24deg] bg-blue-300/20" />
-</div>
+        {/* Blueprint-style background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
+        <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
+        <div className="blueprint-drift absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
+          <div className="absolute inset-0 [background-image:linear-gradient(135deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%),linear-gradient(45deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%)] [background-size:160px_160px]" />
+          <div className="absolute right-20 top-20 h-64 w-64 rounded-full border border-blue-300/30" />
+          <div className="absolute right-44 top-44 h-40 w-40 rounded-full border border-blue-300/20" />
+          <div className="absolute right-10 bottom-20 h-px w-96 rotate-[-18deg] bg-blue-300/30" />
+          <div className="absolute right-32 bottom-40 h-px w-80 rotate-[24deg] bg-blue-300/20" />
+        </div>
 
-  <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
-    <div>
-      <p className="text-sm font-bold uppercase tracking-[0.4em] text-blue-400">
-        Brothers Legacy Blueprint, LLC
-      </p>
+        <div className="relative mx-auto grid max-w-7xl gap-16 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.4em] text-blue-400">
+              Brothers Legacy Blueprint, LLC
+            </p>
 
-      <h1 className="mt-6 max-w-4xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl">
-        Building Legacy.
-        <br />
-        Creating Impact.
-      </h1>
+            <h1 className="mt-6 max-w-4xl text-5xl font-black leading-tight tracking-tight text-white md:text-7xl">
+              Building Legacy.
+              <br />
+              Creating Impact.
+            </h1>
 
-      <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-        Auto body repair, hail damage restoration, claims management, and
-        fleet-ready services designed for performance, scalability, and
-        government contracting readiness.
-      </p>
+            <p className="mt-8 max-w-2xl text-lg leading-8 text-slate-300">
+              Auto body repair, hail damage restoration, claims management, and
+              fleet-ready services designed for performance, scalability, and
+              government contracting readiness.
+            </p>
 
-      <div className="mt-10 flex flex-wrap gap-4">
-        <a
-          href="#contact"
-          className="rounded-2xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
-        >
-          Request Opportunity
-        </a>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="rounded-2xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
+              >
+                Request Opportunity
+              </a>
 
-        <a
-          href="#services"
-          className="rounded-2xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10"
-        >
-          View Services
-        </a>
-      </div>
-    </div>
-
-   {/* Glow behind NAICS panel */}
-<div className="glow-pulse absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
-    <div className="absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
-
-<div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl p-8 shadow-2xl backdrop-blur">
-      <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
-        NAICS Codes
-      </p>
-
-      <div className="mt-5 h-px bg-white/20" />
-
-      <div className="mt-6 space-y-5">
-        {[
-          ["811121", "Automotive Body, Paint, and Interior Repair"],
-          ["811122", "Automotive Glass Replacement & Repair"],
-          ["524291", "Claims Adjusting"],
-          ["488490", "Other Support Activities for Road Transportation"],
-       ].map(([code, label], i) => (
-          <div
-            key={code}
-          className={[
-  "group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40",
-  "opacity-0 translate-y-5 animate-fade-up",
- naicsDelayClasses[i] ?? "delay-0",
-].join(" ")}
-          >
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/40 text-blue-300">
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl transition duration-300 group-hover:shadow-lg group-hover:shadow-blue-400/30 group-hover:scale-110">
-  {code === "811121" && "🚗"}
-  {code === "811122" && "🛠️"}
-  {code === "524291" && "📋"}
-  {code === "488490" && "🛣️"}
-</div>
-            </div>
-
-            <div>
-              <div className="text-2xl font-black text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
-                {code}
-              </div>
-              <div className="mt-1 text-sm leading-6 text-slate-300">
-                {label}
-              </div>
+              <a
+                href="#capabilities"
+                className="rounded-2xl border border-white/20 px-7 py-4 font-bold text-white transition hover:bg-white/10"
+              >
+                View Services
+              </a>
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
+
+          {/* Glow behind NAICS panel */}
+          <div className="glow-pulse absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
+          <div className="absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
+
+          <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl p-8 shadow-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
+              NAICS Codes
+            </p>
+
+            <div className="mt-5 h-px bg-white/20" />
+
+            <div className="mt-6 space-y-5">
+              {[
+                ["811121", "Automotive Body, Paint, and Interior Repair"],
+                ["811122", "Automotive Glass Replacement & Repair"],
+                ["524291", "Claims Adjusting"],
+                ["488490", "Other Support Activities for Road Transportation"],
+              ].map(([code, label], i) => (
+                <div
+                  key={code}
+                  className={[
+                    "group flex gap-5 rounded-2xl border border-white/10 bg-slate-950/40 p-5 transition duration-300 hover:-translate-y-1 hover:border-blue-400/40",
+                    "opacity-0 translate-y-5 animate-fade-up",
+                    naicsDelayClasses[i] ?? "delay-0",
+                  ].join(" ")}
+                >
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl transition duration-300 group-hover:shadow-lg group-hover:shadow-blue-400/30 group-hover:scale-110">
+                    {code === "811121" && "🚗"}
+                    {code === "811122" && "🛠️"}
+                    {code === "524291" && "📋"}
+                    {code === "488490" && "🛣️"}
+                  </div>
+
+                  <div>
+                    <div className="text-2xl font-black text-blue-400 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]">
+                      {code}
+                    </div>
+                    <div className="mt-1 text-sm leading-6 text-slate-300">
+                      {label}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section className="border-y border-white/10 bg-slate-900 px-6 py-10">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-4">
@@ -186,9 +186,7 @@ export default function Home() {
               <div className="text-xs font-bold uppercase tracking-[0.25em] text-blue-300">
                 {label}
               </div>
-              <div className="mt-3 text-2xl font-black text-white">
-                {value}
-              </div>
+              <div className="mt-3 text-2xl font-black text-white">{value}</div>
             </div>
           ))}
         </div>
@@ -208,7 +206,7 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm"
+                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
               >
                 <h3 className="text-xl font-black text-[#0B1F3A]">
                   {service.title}
@@ -222,8 +220,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-100 px-6 py-24 text-slate-950">
+      <section id="about" className="bg-slate-100 px-6 py-24 text-slate-950">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+          <div className="rounded-[2rem] bg-[#0B1F3A] p-10 text-white shadow-2xl">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
+              About BLB
+            </p>
+            <h2 className="mt-4 text-4xl font-black">
+              A name built on family, craftsmanship, and trust.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-slate-200">
+              Brothers Legacy Blueprint, LLC was founded on the belief that
+              quality vehicle repair and operational reliability go hand in
+              hand. Rooted in decades of hands-on industry experience, BLB
+              brings a disciplined, blueprint-driven approach to every job, from
+              single-vehicle restorations to large-scale fleet and storm-response
+              operations.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-slate-200">
+              Our work is positioned for the standards of public-sector and
+              commercial contracting: clear documentation, accountable
+              communication, and dependable turnaround.
+            </p>
+          </div>
+
           <div className="rounded-[2rem] bg-[#0B1F3A] p-10 text-white shadow-2xl">
             <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
               Government Ready
@@ -233,26 +253,20 @@ export default function Home() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-slate-200">
               BLB is positioned to support public-sector and fleet-focused
-              opportunities through clear capabilities, disciplined presentation,
-              and responsive operational support.
+              opportunities through clear capabilities, disciplined
+              presentation, and responsive operational support.
             </p>
-          </div>
-
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-10 shadow-sm">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
-              Why BLB
-            </p>
-            <ul className="mt-6 space-y-4 text-lg leading-8 text-slate-700">
-              <li>• One vendor relationship for repair, claims, and logistics.</li>
-              <li>• Strong fit for fleet uptime and storm-response needs.</li>
-              <li>• Professional positioning aligned with procurement expectations.</li>
-              <li>• North Texas base with scalable response capability.</li>
+            <ul className="mt-6 space-y-3 text-base leading-7 text-slate-200">
+              <li>• Registered for federal and state contracting</li>
+              <li>• Insurance-aligned claims and estimating workflows</li>
+              <li>• Scalable response for hail and CAT events</li>
+              <li>• North Texas operations base</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <section className="bg-white px-6 py-24 text-slate-950">
+      <section id="strengths" className="bg-white px-6 py-24 text-slate-950">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
             Contractor Strengths
@@ -303,16 +317,24 @@ export default function Home() {
                 <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
                   Phone
                 </div>
-                <div className="mt-1 text-2xl font-bold text-white">972.896.0126</div>
+                <a
+                  href="tel:+19728960126"
+                  className="mt-1 inline-block text-2xl font-bold text-white hover:text-blue-300 transition"
+                >
+                  972.896.0126
+                </a>
               </div>
 
               <div>
                 <div className="text-sm font-bold uppercase tracking-[0.2em] text-slate-500">
                   Email
                 </div>
-                <div className="mt-1 text-xl font-bold text-white">
+                <a
+                  href="mailto:Mikal.sanchez@brotherslegacyblueprint.com"
+                  className="mt-1 inline-block text-xl font-bold text-white hover:text-blue-300 transition break-all"
+                >
                   Mikal.sanchez@brotherslegacyblueprint.com
-                </div>
+                </a>
               </div>
 
               <div>
@@ -326,69 +348,97 @@ export default function Home() {
             </div>
           </div>
 
-          <form
-            action="mailto:Mikal.sanchez@brotherslegacyblueprint.com"
-            method="post"
-            encType="text/plain"
-            className="rounded-[2rem] border border-white/10 bg-white p-8 text-slate-950 shadow-2xl"
-          >
-            <h3 className="text-2xl font-black text-[#0B1F3A]">
-              Opportunity Inquiry
-            </h3>
-
-            <div className="mt-6 grid gap-4">
-              <input
-                name="Name"
-                placeholder="Name"
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              />
-
-              <input
-                name="Organization"
-                placeholder="Organization / Agency"
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              />
-
-              <input
-                name="Phone"
-                placeholder="Phone"
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              />
-
-              <input
-                name="Email"
-                placeholder="Email"
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              />
-
-              <select
-                name="Opportunity Type"
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              >
-                <option>Fleet Vehicle Repair</option>
-                <option>Hail / Storm Response</option>
-                <option>Claims Management</option>
-                <option>Government Contracting</option>
-                <option>Other</option>
-              </select>
-
-              <textarea
-                name="Message"
-                placeholder="Tell us about the opportunity..."
-                rows={5}
-                className="rounded-xl border border-slate-300 px-4 py-3"
-              />
-
-              <button
-                type="submit"
-                className="rounded-2xl bg-[#0B1F3A] px-6 py-4 font-black text-white hover:bg-slate-800"
-              >
-                Submit Inquiry
-              </button>
-            </div>
-          </form>
+          <ContactForm />
         </div>
       </section>
+
+      <footer className="border-t border-white/10 bg-slate-950 px-6 py-12 text-slate-400">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
+          <div>
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="BLB Logo"
+                width={48}
+                height={48}
+                className="h-10 w-auto object-contain"
+              />
+              <div>
+                <div className="text-base font-black text-white">BLB</div>
+                <div className="text-[10px] font-semibold tracking-[0.25em] text-slate-500">
+                  BROTHERS LEGACY BLUEPRINT, LLC
+                </div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm leading-6">
+              Fleet vehicle repair, hail restoration, claims management, and
+              government contracting support across DFW and North Texas.
+            </p>
+          </div>
+
+          <div>
+            <div className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500">
+              Navigate
+            </div>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <a href="#capabilities" className="hover:text-white transition">
+                  Capabilities
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-white transition">
+                  About
+                </a>
+              </li>
+              <li>
+                <a href="#strengths" className="hover:text-white transition">
+                  Strengths
+                </a>
+              </li>
+              <li>
+                <a href="#contact" className="hover:text-white transition">
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-xs font-bold uppercase tracking-[0.25em] text-slate-500">
+              Contact
+            </div>
+            <ul className="mt-4 space-y-2 text-sm">
+              <li>
+                <a href="tel:+19728960126" className="hover:text-white transition">
+                  972.896.0126
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:Mikal.sanchez@brotherslegacyblueprint.com"
+                  className="hover:text-white transition break-all"
+                >
+                  Mikal.sanchez@brotherslegacyblueprint.com
+                </a>
+              </li>
+              <li>Garland, TX</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-xs">
+          <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <div>
+              © {new Date().getFullYear()} Brothers Legacy Blueprint, LLC. All
+              rights reserved.
+            </div>
+            <div className="text-slate-500">
+              NAICS 811121 • 811122 • 524291 • 488490
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
