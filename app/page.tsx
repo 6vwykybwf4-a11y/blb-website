@@ -375,7 +375,15 @@ export default function Home() {
               </div>
               <div>
                 <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
-                  UEI / CAGE
+                  UEI
+                </div>
+                <div className="mt-1 text-lg font-bold text-white">
+                  GBS7FLXMLJ84
+                </div>
+              </div>
+              <div>
+                <div className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  CAGE
                 </div>
                 <div className="mt-1 text-lg font-bold text-white">
                   To Be Assigned
