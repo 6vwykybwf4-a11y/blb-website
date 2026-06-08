@@ -77,7 +77,6 @@ export default function Home() {
       </header>
 
       <section className="relative overflow-hidden bg-slate-950 px-6 py-28">
-        {/* Blueprint-style background */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
         <div className="blueprint-drift absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
@@ -123,11 +122,10 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Glow behind NAICS panel */}
           <div className="glow-pulse absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
           <div className="absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
 
-          <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] backdrop-blur-xl p-8 shadow-2xl">
+          <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl">
             <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
               NAICS Codes
             </p>
@@ -149,7 +147,7 @@ export default function Home() {
                     naicsDelayClasses[i] ?? "delay-0",
                   ].join(" ")}
                 >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl transition duration-300 group-hover:shadow-lg group-hover:shadow-blue-400/30 group-hover:scale-110">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-blue-400/50 bg-blue-500/10 text-2xl transition duration-300 group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-blue-400/30">
                     {code === "811121" && "🚗"}
                     {code === "811122" && "🛠️"}
                     {code === "524291" && "📋"}
@@ -192,9 +190,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="capabilities" className="bg-white px-6 py-24 text-slate-950">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
+      <section
+        id="capabilities"
+        className="relative overflow-hidden bg-slate-900 px-6 py-24 text-white"
+      >
+        <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:64px_64px]" />
+        <div className="absolute -left-20 top-1/3 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
             Core Capabilities
           </p>
 
@@ -206,12 +210,12 @@ export default function Home() {
             {services.map((service) => (
               <div
                 key={service.title}
-                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-7 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:border-blue-400/40 hover:bg-white/[0.07]"
               >
-                <h3 className="text-xl font-black text-[#0B1F3A]">
+                <h3 className="text-xl font-black text-white">
                   {service.title}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">
+                <p className="mt-4 text-sm leading-7 text-slate-300">
                   {service.text}
                 </p>
               </div>
@@ -220,16 +224,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="bg-slate-100 px-6 py-24 text-slate-950">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
-          <div className="rounded-[2rem] bg-[#0B1F3A] p-10 text-white shadow-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
+      <section
+        id="about"
+        className="relative overflow-hidden bg-slate-950 px-6 py-24 text-white"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(37,99,235,0.18),transparent_55%)]" />
+
+        <div className="relative mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-2xl backdrop-blur">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
               About BLB
             </p>
             <h2 className="mt-4 text-4xl font-black">
               A name built on family, craftsmanship, and trust.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-200">
+            <p className="mt-6 text-lg leading-8 text-slate-300">
               Brothers Legacy Blueprint, LLC was founded on the belief that
               quality vehicle repair and operational reliability go hand in
               hand. Rooted in decades of hands-on industry experience, BLB
@@ -237,26 +246,26 @@ export default function Home() {
               single-vehicle restorations to large-scale fleet and storm-response
               operations.
             </p>
-            <p className="mt-4 text-lg leading-8 text-slate-200">
+            <p className="mt-4 text-lg leading-8 text-slate-300">
               Our work is positioned for the standards of public-sector and
               commercial contracting: clear documentation, accountable
               communication, and dependable turnaround.
             </p>
           </div>
 
-          <div className="rounded-[2rem] bg-[#0B1F3A] p-10 text-white shadow-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-10 shadow-2xl backdrop-blur">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
               Government Ready
             </p>
             <h2 className="mt-4 text-4xl font-black">
               Built for serious contracting conversations.
             </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-200">
+            <p className="mt-6 text-lg leading-8 text-slate-300">
               BLB is positioned to support public-sector and fleet-focused
               opportunities through clear capabilities, disciplined
               presentation, and responsive operational support.
             </p>
-            <ul className="mt-6 space-y-3 text-base leading-7 text-slate-200">
+            <ul className="mt-6 space-y-3 text-base leading-7 text-slate-300">
               <li>• Registered for federal and state contracting</li>
               <li>• Insurance-aligned claims and estimating workflows</li>
               <li>• Scalable response for hail and CAT events</li>
@@ -266,9 +275,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="strengths" className="bg-white px-6 py-24 text-slate-950">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-sm font-bold uppercase tracking-[0.3em] text-slate-500">
+      <section
+        id="strengths"
+        className="relative overflow-hidden bg-slate-900 px-6 py-24 text-white"
+      >
+        <div className="absolute inset-0 opacity-[0.05] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:64px_64px]" />
+
+        <div className="relative mx-auto max-w-7xl">
+          <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-300">
             Contractor Strengths
           </p>
 
@@ -285,10 +299,10 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm"
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-lg backdrop-blur transition hover:-translate-y-1 hover:border-blue-400/40"
               >
-                <div className="text-3xl font-black text-[#0B1F3A]">✓</div>
-                <p className="mt-4 font-bold text-slate-800">{item}</p>
+                <div className="text-3xl font-black text-blue-400">✓</div>
+                <p className="mt-4 font-bold text-white">{item}</p>
               </div>
             ))}
           </div>
