@@ -101,7 +101,7 @@ export default function Home() {
       <section className="relative overflow-hidden bg-slate-950 px-6 py-28">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(37,99,235,0.25),transparent_55%)]" />
         <div className="absolute inset-0 opacity-[0.08] [background-image:linear-gradient(to_right,#60a5fa_1px,transparent_1px),linear-gradient(to_bottom,#60a5fa_1px,transparent_1px)] [background-size:56px_56px]" />
-        <div className="blueprint-drift absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
+        <div className="blueprint-drift pointer-events-none absolute right-0 top-0 h-full w-1/2 opacity-[0.16]">
           <div className="absolute inset-0 [background-image:linear-gradient(135deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%),linear-gradient(45deg,transparent_0%,transparent_48%,#60a5fa_49%,transparent_50%,transparent_100%)] [background-size:160px_160px]" />
           <div className="absolute right-20 top-20 h-64 w-64 rounded-full border border-blue-300/30" />
           <div className="absolute right-44 top-44 h-40 w-40 rounded-full border border-blue-300/20" />
@@ -128,7 +128,7 @@ export default function Home() {
               Texas.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="relative z-10 mt-10 flex flex-wrap gap-4">
               <a
                 href="#contact"
                 className="rounded-2xl bg-blue-600 px-7 py-4 font-bold text-white shadow-lg shadow-blue-600/20 transition hover:bg-blue-700"
@@ -144,7 +144,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-blue-400/30 bg-blue-500/10 px-5 py-3 text-sm text-slate-200 shadow-lg shadow-blue-950/20 backdrop-blur-sm">
+            <div className="relative z-10 mt-6 inline-flex items-center gap-3 rounded-2xl border border-blue-400/30 bg-blue-500/10 px-5 py-3 text-sm text-slate-200 shadow-lg shadow-blue-950/20 backdrop-blur-sm">
               <span className="font-bold uppercase tracking-[0.25em] text-blue-300">
                 UEI
               </span>
@@ -152,8 +152,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="glow-pulse absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
-          <div className="absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
+          <div className="glow-pulse pointer-events-none absolute -right-20 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-500/30 blur-3xl" />
+          <div className="pointer-events-none absolute right-10 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-blue-400/10 blur-2xl" />
 
           <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.06] p-8 shadow-2xl backdrop-blur-xl">
             <p className="text-sm font-bold uppercase tracking-[0.35em] text-blue-300">
