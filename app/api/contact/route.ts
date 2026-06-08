@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
 export const runtime = "nodejs";
 
@@ -66,8 +67,9 @@ export async function POST(req: Request) {
 
     const recipient =
       process.env.CONTACT_TO_EMAIL || "Mikal.sanchez@brotherslegacyblueprint.com";
-    const fromAddress = process.env.RESEND_FROM_EMAIL;
-    const apiKey = process.env.RESEND_API_KEY;
+    const smtpUser = process.env.SMTP_USER;
+    const smtpPass = process.env.SMTP_PASS;
+    const smtpFrom = process.env.SMTP_FROM || smtpUser;
 
     const htmlBody = `
       <h2>New Opportunity Inquiry</h2>
@@ -81,34 +83,50 @@ export async function POST(req: Request) {
       <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
     `.trim();
 
-    // If Resend is configured, send via API. Otherwise log and accept (so the
-    // form still works during initial deploy before env vars are set).
-    if (apiKey && fromAddress) {
-      const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          "Content-Type": "application/json",
+    const textBody = [
+      `New Opportunity Inquiry`,
+      ``,
+      `Name: ${name}`,
+      `Organization: ${organization || "—"}`,
+      `Phone: ${phone || "—"}`,
+      `Email: ${email}`,
+      `Opportunity Type: ${opportunityType || "—"}`,
+      ``,
+      `Message:`,
+      message,
+    ].join("\n");
+
+    // If SMTP is configured, send via Gmail/Workspace. Otherwise log and accept
+    // (so the form still works during initial deploy before env vars are set).
+    if (smtpUser && smtpPass) {
+      const transporter = nodemailer.createTransport({
+        host: process.env.SMTP_HOST || "smtp.gmail.com",
+        port: Number(process.env.SMTP_PORT || 465),
+        secure: (process.env.SMTP_SECURE || "true") === "true",
+        auth: {
+          user: smtpUser,
+          pass: smtpPass,
         },
-        body: JSON.stringify({
-          from: fromAddress,
-          to: [recipient],
-          reply_to: email,
-          subject: `New BLB Inquiry — ${opportunityType || "General"} (${name})`,
-          html: htmlBody,
-        }),
       });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.error("Resend error:", errText);
+      try {
+        await transporter.sendMail({
+          from: `"BLB Website" <${smtpFrom}>`,
+          to: recipient,
+          replyTo: email,
+          subject: `New BLB Inquiry — ${opportunityType || "General"} (${name})`,
+          text: textBody,
+          html: htmlBody,
+        });
+      } catch (err) {
+        console.error("SMTP send error:", err);
         return NextResponse.json(
           { ok: false, error: "Email service error. Please try again." },
           { status: 502 }
         );
       }
     } else {
-      console.log("[contact] Email service not configured. Submission:", {
+      console.log("[contact] SMTP not configured. Submission:", {
         name,
         email,
         organization,
